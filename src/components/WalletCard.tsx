@@ -66,9 +66,11 @@ export const WalletCard = () => {
           <CardTitle className="text-xl font-bold">
             MetaMask Wallet
           </CardTitle>
-          <CardDescription>
-            Connect your MetaMask wallet to get started
-          </CardDescription>
+            {!isConnected && (
+              <CardDescription>
+                Connect your MetaMask wallet to get started
+              </CardDescription>
+            )}
         </CardHeader>
         
         <CardContent className="space-y-4">
